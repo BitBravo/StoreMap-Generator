@@ -3,12 +3,65 @@
 <head>
     <title>FindPatch-Algorithm</title>
     <link rel="stylesheet" href="./findpatch/css/style.css">
-    <script src='./findpatch/js/findpatch.js'></script>
+    <style>
+        span {
+            width: 70px;
+            display: inline-block;
+        }
+        #status {
+            width: 44%;
+        }
+    </style>
 </head>
 
 <body>
-    <h2>Find patch Algorithm</h2>
-    <canvas id="canvas" width="600px" height="600px"></canvas>
+    <h2>Find path Algorithm</h2>
+    <div style='width: 100%;'>
+        Categories :
+        <select id='category'>
+            <option value="Lager">Lager</option>
+            <option value="Holz">Holz</option>
+            <option value="Aktion">Aktion</option>
+            <option value="Garten">Garten</option>
+            <option value="Farben">Farben</option>
+            <option value="Elektro">Elektro</option>
+            <option value="Infroflachen">Infroflachen</option>
+            <option value="Heimwerken">Bauen-Heimwerken</option>
+            <option value="Baustoffe">Baustoffe</option>
+            <option value="Sanitar">Sanitar</option>
+            <option value="Kfz und Fahrrad">Kfz und Fahrrad</option>
+            <option value="Fahrrad">Fahrrad</option>
+            <option value="Door">Door</option>
+            <option value="Tool">Tool</option>
+            <option value="Living">Living</option>
+            <option value="Mein">Mein Standort</option>
+            <option value="Unknown">Unknown</option>
+        </select>
+        <span style='width:30px'>&nbsp;</span>
+        COLOR :
+        <input type='text' id='colorTxt'></input>
+        <input type='button' id='colorBtn' value='OK' onclick='colorCheck()' />
+        <span style='width:30px'></span>
+
+        Type :
+        <select id='itemType'>
+            <option value="pos">POS</option>
+            <option value="end">END POINT</option>
+        </select>
+        <span style='width:30px'></span>
+        <input type='checkbox' id='check' name='delete'>delete
+        <input type='button' id='save' name='save' value ='SAVE' onclick='download()' />
+    </div>
+    <div>
+        <h4 ><span for='status'>STATUS : </span> <span id='status'></span></h4>
+    </div>
+    <div>
+        <canvas id="gridCanvas" width="100%" height="100%"></canvas>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src='./findpatch/js/walls.js'></script>
+    <script src='./findpatch/js/findpatch.js'></script>
+
 </body>
 
 </html>
